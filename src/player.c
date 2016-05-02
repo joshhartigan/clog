@@ -1,3 +1,6 @@
+#include <stdbool.h>
+#include <string.h>
+
 #include "player.h"
 
 #include "color.h"
@@ -39,5 +42,37 @@ void move_player(char key) {
       x < MAP_SIZE_X - 1 &&
       !tile_is_solid(map[x + 1][y])) {
     player.x_pos++;
+  }
+}
+
+int player_has_item(char *name) {
+  for (int i = 0; i < INVENTORY_SIZE; i++) {
+    if (strcmp(player.inventory_names[i], name) == 0) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+int next_inventory_slot() {
+  for (int i = 0; i < INVENTORY_SIZE; i++) {
+    if (player.inventory_names[i] == NULL) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+void give_item(char *name, int value) {
+  int index = player_has_item(name);
+  if (index >= 0) {
+    player.inventory_values[index] = value;
+  }
+
+  else {
+    player.inventory_names[next_inventory_slot()] = name;
+    player.inventory_values[next_inventory_slot()] = value;
   }
 }

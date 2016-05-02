@@ -13,6 +13,7 @@ char *tile_names[TILE_TYPES] = {
   "bush",
   "path",
   "wall",
+  "tree",
 };
 
 char tile_chars[TILE_TYPES] = {
@@ -22,6 +23,7 @@ char tile_chars[TILE_TYPES] = {
   ',',
   '=',
   '#',
+  'T',
 };
 
 int tile_colors[TILE_TYPES] = {
@@ -31,6 +33,7 @@ int tile_colors[TILE_TYPES] = {
   GREEN,
   YELLOW,
   YELLOW,
+  GREEN,
 };
 
 int tile_index_from_name(char *name) {

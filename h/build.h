@@ -6,3 +6,5 @@
 
 void build_path();
 void build_wall();
+
+void chop_tree();

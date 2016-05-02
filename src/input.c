@@ -18,5 +18,8 @@ void handle_keypress(char key) {
     case KEY_BUILD_WALL:
       build_wall();
       break;
+    case KEY_CHOP_TREE:
+      chop_tree();
+      break;
   }
 }

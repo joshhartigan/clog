@@ -2,7 +2,7 @@
 
 #include <stdbool.h>
 
-#define TILE_TYPES 6
+#define TILE_TYPES 7
 
 #define GRASS  0
 #define WATER  1
@@ -10,6 +10,7 @@
 #define BUSH   3
 #define PATH   4
 #define WALL   5
+#define TREE   6
 
 // these arrays are ordered lists of attributes for each tile
 char *tile_names[TILE_TYPES];

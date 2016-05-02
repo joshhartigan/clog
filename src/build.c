@@ -33,3 +33,10 @@ void build_wall() {
     player.resources -= WALL_COST;
   }
 }
+
+void chop_tree() {
+  int x = player.x_pos;
+  int y = player.y_pos;
+
+  if (map[x][y] != tile_chars[TREE]) return;
+}

@@ -9,5 +9,6 @@
 // building / destroying
 #define KEY_LAY_PATH   'b'
 #define KEY_BUILD_WALL 'w'
+#define KEY_CHOP_TREE  'c'
 
 void handle_keypress(char key);
