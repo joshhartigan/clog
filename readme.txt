@@ -8,3 +8,6 @@ it is written in C and depends upon the curses library (you probably have it)
 to compile it:
   `mkdir bin`
   `make`
+
+to play it:
+  read h/input.h
